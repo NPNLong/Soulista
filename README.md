@@ -44,7 +44,14 @@ Hãy để Soulista trở thành cầu nối tin cậy giữa bạn và những 
     cd <tên_thư_mục_ứng_dụng>
     ```
 
-2.  **Tạo và kích hoạt môi trường ảo (venv):**
+2.  **Tạo file .env:**
+    Trong thư mục gốc của backend, tạo một file tên là `.env` và thêm các khóa API của bạn vào đó:
+    ```bash
+    GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+    ```
+    Hãy thay `YOUR_GEMINI_API_KEY` bằng khóa API Gemini thực tế của bạn.
+
+3.  **Tạo và kích hoạt môi trường ảo (venv):**
     ```bash
     python -m venv venv
     # Trên Windows
@@ -53,12 +60,12 @@ Hãy để Soulista trở thành cầu nối tin cậy giữa bạn và những 
     source venv/bin/activate
     ```
 
-3.  **Cài đặt các thư viện cần thiết:**
+4.  **Cài đặt các thư viện cần thiết:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Chạy server:**
+5.  **Chạy server:**
     ```bash
     uvicorn main:app --reload
     ```
@@ -71,12 +78,19 @@ Hãy để Soulista trở thành cầu nối tin cậy giữa bạn và những 
     cd frontend
     ```
 
-2.  **Cài đặt các dependencies:**
+2.  **Tạo file .env:**
+    Trong thư mục gốc của frontend, tạo một file tên là `.env` và thêm các khóa API của bạn vào đó:
+    ```bash
+    VITE_Maps_API_KEY=YOUR_Maps_API_KEY
+    ```
+    Hãy thay `YOUR_Maps_API_KEY` bằng khóa API Google Maps thực tế của bạn.
+
+3.  **Cài đặt các dependencies:**
     ```bash
     npm install
     ```
 
-3.  **Chạy ứng dụng:**
+4.  **Chạy ứng dụng:**
     ```bash
     npm run dev
     ```
